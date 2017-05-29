@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Assignment..</title>
+</head>
+<body ng-app="myUpload">
+	<h1>File uploading using AngularJS and Node</h1>
+	<form  ng-controller="Task as up" name="up.upload_form">
+		Select your file : <input type="file" ngf-select ng-model="up.file" name="file" ngf-max-size="6MB"/> <hr>
+		<h2>Image Preview :</h2> <img style="width:300px; height:200px" ng-show="!!up.file" ngf-thumbnail="up.file"/>
+		<button type="submit" ng-click="up.submit()">Upload</button>
+		<p>{{up.progress}}</p>
+	 </form>
+	</body>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="sources/ng-file-upload.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload-shim.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	</html>
